@@ -32,6 +32,14 @@ namespace Randomizer.Tests
         }
 
         [TestMethod]
+        public void TestFluentIntegersAddress()
+        {
+            var randomOrg = new RandomOrgV1();
+
+            Assert.AreEqual("http://random.org/integers", randomOrg.IntegerRequest(1,2).RequestAddress.AbsoluteUri);
+        }
+
+        [TestMethod]
         public void TestFormatQueryString()
         {
             var randomOrg = new RandomOrgV1();
