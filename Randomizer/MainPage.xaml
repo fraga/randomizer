@@ -47,7 +47,6 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <phone:LongListSelector HorizontalAlignment="Left" Height="100" Margin="155,0,0,0" VerticalAlignment="Top" Width="100"/>
 
         </Grid>
 
