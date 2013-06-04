@@ -1,6 +1,8 @@
 ﻿using System;
 using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 using Randomizer.Utils;
+using System.Threading.Tasks;
+using System.Text.RegularExpressions;
 
 namespace Randomizer.Tests
 {
@@ -57,6 +59,15 @@ namespace Randomizer.Tests
 
             Assert.ThrowsException<RandoOrgMinGreaterThanMaxException>(() => randomOrg.IntegerRequest(6, 1));
             Assert.ThrowsException<RandoOrgMinGreaterThanMaxException>(() => randomOrg.IntegerRequest(-60, -100));
+        }
+
+        public async Task<string> CallRequestAsync()
+        {
+            var randomOrg = new RandomOrgV1();
+
+            var result = await randomOrg.IntegerRequest(1, 100).Request();
+
+            return result;
         }
     }
 }
