@@ -86,7 +86,6 @@
     <Compile Include="Exceptions\RandoOrgMinGreaterThanMaxException.cs" />
     <Compile Include="RandomOrgV1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="RandoOrgMinGreaterThanMaxException.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
