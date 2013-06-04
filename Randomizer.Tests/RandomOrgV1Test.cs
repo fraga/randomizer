@@ -38,7 +38,7 @@ namespace Randomizer.Tests
         {
             var randomOrg = new RandomOrgV1();
 
-            Assert.AreEqual("http://random.org/integers", randomOrg.IntegerRequest(1,2).RequestAddress.AbsoluteUri);
+            Assert.AreEqual("http://random.org/integers?num=1&min=1&max=100&col=1&base=10&format=plain&rnd=new", randomOrg.IntegerRequest(1, 100).RequestAddress.AbsoluteUri);
         }
 
         [TestMethod]
