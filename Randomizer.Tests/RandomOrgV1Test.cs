@@ -16,6 +16,12 @@ namespace Randomizer.Tests
         }
 
         [TestMethod]
+        public void TestBaseAddress()
+        {
+            Assert.AreEqual("http://random.org", new RandomOrgV1().BaseAddress());
+        }
+
+        [TestMethod]
         public void TestRequestAddressShouldNotBeNull()
         {
             var randomOrg = new RandomOrgV1();

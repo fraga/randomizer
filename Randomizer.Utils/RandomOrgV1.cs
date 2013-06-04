@@ -27,7 +27,12 @@ namespace Randomizer.Utils
 
         public RandomOrgV1()
         {
-            RequestAddress = new Uri("http://random.org/");
+            RequestAddress = new Uri(BaseAddress());
+        }
+
+        public string BaseAddress()
+        {
+            return "http://random.org";
         }
 
         public RandomOrgV1 IntegerRequest(int min, int max)
