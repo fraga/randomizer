@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net;
+using System.Net.Http;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -41,9 +42,14 @@ namespace Randomizer.Utils
             return new Uri(String.Format("/?num=1&min={0}&max={1}&col=1&base=10&format=plain&rnd=new", min, max));
         }
 
-        public Task<string> Request()
+        public async Task<string> Request()
         {
-            return null;
+            HttpClient client = new HttpClient();
+            var response = await client.GetAsync(RequestAddress.ToString());
+
+            var content = await response.Content.ReadAsStringAsync();
+
+            return content;
         }
 
         public string FormatBase(RandomOrgV1Base format)
