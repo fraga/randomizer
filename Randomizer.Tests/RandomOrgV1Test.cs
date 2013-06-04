@@ -49,5 +49,14 @@ namespace Randomizer.Tests
             Assert.AreEqual("http://random.org/?num=1&min=10&max=60&col=1&base=10&format=plain&rnd=new", randomOrg.FormatQueryString(10, 60).AbsoluteUri);
             Assert.AreEqual("http://random.org/?num=1&min=-100&max=-60&col=1&base=10&format=plain&rnd=new", randomOrg.FormatQueryString(-100, -60).AbsoluteUri);
         }
+
+        [TestMethod]
+        public void TestMinGreaterThanMaxException()
+        {
+            var randomOrg = new RandomOrgV1();
+
+            Assert.ThrowsException<RandoOrgMinGreaterThanMaxException>(() => randomOrg.IntegerRequest(6, 1));
+            Assert.ThrowsException<RandoOrgMinGreaterThanMaxException>(() => randomOrg.IntegerRequest(-60, -100));
+        }
     }
 }
