@@ -33,13 +33,13 @@ namespace Randomizer.Utils
         public RandomOrgV1 IntegerRequest(int min, int max)
         {
             RequestAddress = new Uri(RequestAddress, "/integers");
-            RequestAddress = new Uri(RequestAddress, FormatQueryString(min, max));
+            this.FormatQueryString(min, max);
             return this;
         }
 
-        protected Uri FormatQueryString(int min, int max)
+        public Uri FormatQueryString(int min, int max)
         {
-            return new Uri(String.Format("/?num=1&min={0}&max={1}&col=1&base=10&format=plain&rnd=new", min, max));
+            return new Uri(RequestAddress, String.Format("?num=1&min={0}&max={1}&col=1&base=10&format=plain&rnd=new", min, max));
         }
 
         public async Task<string> Request()
