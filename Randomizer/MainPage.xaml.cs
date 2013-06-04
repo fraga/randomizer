@@ -17,9 +17,19 @@ namespace Randomizer
         public MainPage()
         {
             InitializeComponent();
-
+            PublishIntList();
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        public void PublishIntList()
+        {
+            List<int> min = new List<int>();
+
+            for (int i = 0; i < 5; i++)
+                min.Add(i);
+
+            Min.ItemsSource = min;
         }
 
         // Sample code for building a localized ApplicationBar
