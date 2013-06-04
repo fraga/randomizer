@@ -8,6 +8,7 @@ using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
 using Randomizer.Resources;
+using Randomizer.Utils;
 
 namespace Randomizer
 {
@@ -20,6 +21,23 @@ namespace Randomizer
 
             // Sample code to localize the ApplicationBar
             //BuildLocalizedApplicationBar();
+        }
+
+        private void TxtMin_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtMin.Text = String.Empty;
+        }
+
+        private void TxtMax_GotFocus(object sender, RoutedEventArgs e)
+        {
+            txtMax.Text = String.Empty;
+        }
+
+        private async void btnRandom_Click(object sender, RoutedEventArgs e)
+        {
+            RandomOrgV1 randomOrg = new RandomOrgV1();
+
+            txtResult.Text = await randomOrg.IntegerRequest(Int32.Parse(txtMin.Text), Int32.Parse(txtMax.Text)).Request();
         }
 
         // Sample code for building a localized ApplicationBar
