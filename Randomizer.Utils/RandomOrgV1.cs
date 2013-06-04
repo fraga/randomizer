@@ -36,7 +36,7 @@ namespace Randomizer.Utils
                 throw new RandoOrgMinGreaterThanMaxException();
 
             RequestAddress = new Uri(RequestAddress, "/integers");
-            this.FormatQueryString(min, max);
+            RequestAddress = this.FormatQueryString(min, max);
             return this;
         }
 
