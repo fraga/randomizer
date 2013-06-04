@@ -47,12 +47,16 @@ namespace Randomizer.Utils
 
         public async Task<string> Request()
         {
-            HttpClient client = new HttpClient();
-            var response = await client.GetAsync(RequestAddress.ToString());
+            string content = String.Empty;
 
-            var content = await response.Content.ReadAsStringAsync();
+            using (HttpClient client = new HttpClient())
+            {
+                var response = await client.GetAsync(RequestAddress.ToString());
 
-            return content;
+                content = await response.Content.ReadAsStringAsync();
+            }
+
+            return content.Replace("\r\n", string.Empty);
         }
 
         public string FormatBase(BaseEnum format)
