@@ -4,11 +4,14 @@ using Microsoft.VisualStudio.TestPlatform.UnitTestFramework;
 namespace Randomizer.Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class RandomOrgV1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestConstructor()
         {
+            Assert.IsNotNull(new RandomOrgV1());
         }
+
+
     }
 }
