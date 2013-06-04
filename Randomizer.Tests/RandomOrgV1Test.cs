@@ -25,10 +25,10 @@ namespace Randomizer.Tests
         {
             var randomOrg = new RandomOrgV1();
 
-            Assert.AreEqual("base2", randomOrg.FormatBase(RandomOrgV1Base.Binary));
-            Assert.AreEqual("base8", randomOrg.FormatBase(RandomOrgV1Base.Octal));
-            Assert.AreEqual("base10", randomOrg.FormatBase(RandomOrgV1Base.Decimal));
-            Assert.AreEqual("base16", randomOrg.FormatBase(RandomOrgV1Base.Hexa));
+            Assert.AreEqual("base2", randomOrg.FormatBase(BaseEnum.Binary));
+            Assert.AreEqual("base8", randomOrg.FormatBase(BaseEnum.Octal));
+            Assert.AreEqual("base10", randomOrg.FormatBase(BaseEnum.Decimal));
+            Assert.AreEqual("base16", randomOrg.FormatBase(BaseEnum.Hexa));
         }
 
         [TestMethod]

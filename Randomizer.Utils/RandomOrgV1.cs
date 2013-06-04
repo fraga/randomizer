@@ -13,7 +13,7 @@ using System.Windows.Shapes;
 
 namespace Randomizer.Utils
 {
-    public enum RandomOrgV1Base
+    public enum BaseEnum
     {
         Binary,
         Octal,
@@ -55,17 +55,17 @@ namespace Randomizer.Utils
             return content;
         }
 
-        public string FormatBase(RandomOrgV1Base format)
+        public string FormatBase(BaseEnum format)
         {
             switch(format)
             {
-                case RandomOrgV1Base.Binary:
+                case BaseEnum.Binary:
                     return "base2";
-                case RandomOrgV1Base.Decimal:
+                case BaseEnum.Decimal:
                     return "base10";
-                case RandomOrgV1Base.Octal:
+                case BaseEnum.Octal:
                     return "base8";
-                case RandomOrgV1Base.Hexa:
+                case BaseEnum.Hexa:
                     return "base16";
                 default:
                     return "base10";
