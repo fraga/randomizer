@@ -37,7 +37,11 @@ namespace Randomizer
         {
             RandomOrgV1 randomOrg = new RandomOrgV1();
 
+            btnRandom.IsEnabled = false;
+
             txtResult.Text = await randomOrg.IntegerRequest(Int32.Parse(txtMin.Text), Int32.Parse(txtMax.Text)).Request();
+
+            btnRandom.IsEnabled = true;
         }
 
         // Sample code for building a localized ApplicationBar
