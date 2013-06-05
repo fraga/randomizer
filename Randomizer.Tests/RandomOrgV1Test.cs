@@ -33,10 +33,10 @@ namespace Randomizer.Tests
         {
             var randomOrg = new RandomOrgV1();
 
-            Assert.AreEqual("base2", randomOrg.FormatBase(BaseEnum.Binary));
-            Assert.AreEqual("base8", randomOrg.FormatBase(BaseEnum.Octal));
-            Assert.AreEqual("base10", randomOrg.FormatBase(BaseEnum.Decimal));
-            Assert.AreEqual("base16", randomOrg.FormatBase(BaseEnum.Hexa));
+            Assert.AreEqual("base2", randomOrg.FormatBase(NumericSystemEnum.Binary));
+            Assert.AreEqual("base8", randomOrg.FormatBase(NumericSystemEnum.Octal));
+            Assert.AreEqual("base10", randomOrg.FormatBase(NumericSystemEnum.Decimal));
+            Assert.AreEqual("base16", randomOrg.FormatBase(NumericSystemEnum.Hexa));
         }
 
         [TestMethod]
