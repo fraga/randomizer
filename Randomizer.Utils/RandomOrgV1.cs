@@ -13,7 +13,7 @@ using System.Windows.Shapes;
 
 namespace Randomizer.Utils
 {
-    
+
 
     public class RandomOrgV1
     {
@@ -70,7 +70,7 @@ namespace Randomizer.Utils
 
         public string FormatBase(NumericSystemEnum format)
         {
-            switch(format)
+            switch (format)
             {
                 case NumericSystemEnum.Binary:
                     return "base2";
