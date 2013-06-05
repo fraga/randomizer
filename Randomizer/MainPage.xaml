@@ -41,16 +41,14 @@
 
         <!--TitlePanel contains the name of the application and page title-->
         <StackPanel x:Name="TitlePanel" Grid.Row="0" Margin="12,17,0,28">
-            <TextBlock Text="Randomizer" Style="{StaticResource PhoneTextNormalStyle}" Margin="12,0"/>
-            <TextBlock Text="Random int" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+            <TextBlock Text="Randomizer" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
         </StackPanel>
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBox x:Name="txtMin" HorizontalAlignment="Left" Height="72" Margin="0,10,0,0" TextWrapping="Wrap" Text="Min" VerticalAlignment="Top" Width="456" GotFocus="TxtMin_GotFocus"/>
-            <TextBox x:Name="txtMax" HorizontalAlignment="Left" Height="72" Margin="0,82,0,0" TextWrapping="Wrap" Text="Max" VerticalAlignment="Top" Width="456" GotFocus="TxtMax_GotFocus"/>
-            <Button x:Name="btnRandom" Content="Randomize" HorizontalAlignment="Left" Margin="149,159,0,0" VerticalAlignment="Top" Click="btnRandom_Click"/>
-            <TextBox x:Name="txtResult" HorizontalAlignment="Left" Height="72" Margin="0,272,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="456" />
+            <TextBox x:Name="txtMin" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="Min" VerticalAlignment="Top" Width="456" GotFocus="TxtMin_GotFocus" Margin="0,-26,0,0"/>
+            <TextBox x:Name="txtMax" HorizontalAlignment="Left" Height="72" Margin="0,46,0,0" TextWrapping="Wrap" Text="Max" VerticalAlignment="Top" Width="456" GotFocus="TxtMax_GotFocus"/>
+            <TextBox x:Name="txtResult" HorizontalAlignment="Left" Height="330" Margin="0,118,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="456" />
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
