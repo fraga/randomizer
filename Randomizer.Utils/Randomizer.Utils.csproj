@@ -84,6 +84,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Exceptions\RandoOrgMinGreaterThanMaxException.cs" />
+    <Compile Include="NumericSystemEnum.cs" />
     <Compile Include="RandomOrgV1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

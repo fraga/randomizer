@@ -13,13 +13,7 @@ using System.Windows.Shapes;
 
 namespace Randomizer.Utils
 {
-    public enum NumericSystemEnum
-    {
-        Binary,
-        Octal,
-        Decimal,
-        Hexa
-    }
+    
 
     public class RandomOrgV1
     {
