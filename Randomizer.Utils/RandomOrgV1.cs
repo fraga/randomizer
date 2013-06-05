@@ -21,10 +21,10 @@ namespace Randomizer.Utils
 
         public RandomOrgV1()
         {
-            RequestAddress = new Uri(BaseAddress());
+            RequestAddress = new Uri(GetRandomOrgAddress());
         }
 
-        public string BaseAddress()
+        public string GetRandomOrgAddress()
         {
             return "http://random.org";
         }

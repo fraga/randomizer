@@ -18,7 +18,7 @@ namespace Randomizer.Tests
         [TestMethod]
         public void TestBaseAddress()
         {
-            Assert.AreEqual("http://random.org", new RandomOrgV1().BaseAddress());
+            Assert.AreEqual("http://random.org", new RandomOrgV1().GetRandomOrgAddress());
         }
 
         [TestMethod]
