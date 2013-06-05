@@ -67,6 +67,14 @@ namespace Randomizer.Tests
             Assert.ThrowsException<RandoOrgMinGreaterThanMaxException>(() => randomOrg.IntegerRequest(-60, -100));
         }
 
+        [TestMethod]
+        public void TestStripResult()
+        {
+            var randomOrg = new RandomOrgV1();
+
+            Assert.AreEqual("result", randomOrg.StripResult("result\r\n"));
+        }
+
         public async Task<string> CallRequestAsync()
         {
             var randomOrg = new RandomOrgV1();

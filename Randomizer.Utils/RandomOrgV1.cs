@@ -60,6 +60,11 @@ namespace Randomizer.Utils
                 result = await response.Content.ReadAsStringAsync();
             }
 
+            return StripResult(result);
+        }
+
+        public string StripResult(string result)
+        {
             return result.Replace("\r\n", string.Empty);
         }
 
