@@ -29,12 +29,17 @@ namespace Randomizer.Utils
             return "http://random.org";
         }
 
+        public string GetRandomOrgIntegerAddress()
+        {
+            return "/integers";
+        }
+
         public RandomOrgV1 IntegerRequest(int min, int max)
         {
             if (min > max)
                 throw new RandoOrgMinGreaterThanMaxException();
 
-            RequestAddress = new Uri(RequestAddress, "/integers");
+            RequestAddress = new Uri(RequestAddress, GetRandomOrgIntegerAddress());
             RequestAddress = this.FormatQueryString(min, max);
             return this;
         }
