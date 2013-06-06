@@ -11,7 +11,7 @@ namespace Randomizer.Utils
         {
             get
             {
-                return "Minimun cannot exceed maximum";
+                return "Minimum number cannot exceed maximum number";
             }
         }
     }
