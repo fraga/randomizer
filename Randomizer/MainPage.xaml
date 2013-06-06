@@ -46,8 +46,8 @@
 
         <!--ContentPanel - place additional content here-->
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
-            <TextBox x:Name="txtMin" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="Min" VerticalAlignment="Top" Width="456" GotFocus="TxtMin_GotFocus" Margin="0,-26,0,0"/>
-            <TextBox x:Name="txtMax" HorizontalAlignment="Left" Height="72" Margin="0,46,0,0" TextWrapping="Wrap" Text="Max" VerticalAlignment="Top" Width="456" GotFocus="TxtMax_GotFocus"/>
+            <TextBox x:Name="txtMin" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="Min" VerticalAlignment="Top" Width="456" GotFocus="TxtMin_GotFocus" Margin="0,-26,0,0" InputScope="Number"/>
+            <TextBox x:Name="txtMax" HorizontalAlignment="Left" Height="72" Margin="0,46,0,0" TextWrapping="Wrap" Text="Max" VerticalAlignment="Top" Width="456" GotFocus="TxtMax_GotFocus" InputScope="Number"/>
             <TextBox x:Name="txtResult" HorizontalAlignment="Left" Height="330" Margin="0,118,0,0" TextWrapping="Wrap" Text="Result" VerticalAlignment="Top" Width="456" />
         </Grid>
 
