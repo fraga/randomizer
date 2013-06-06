@@ -48,7 +48,7 @@
         <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
             <TextBox x:Name="txtMin" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="Min" VerticalAlignment="Top" Width="456" GotFocus="TxtMin_GotFocus" Margin="0,-26,0,0" InputScope="Number"/>
             <TextBox x:Name="txtMax" HorizontalAlignment="Left" Height="72" Margin="0,46,0,0" TextWrapping="Wrap" Text="Max" VerticalAlignment="Top" Width="456" GotFocus="TxtMax_GotFocus" InputScope="Number"/>
-            <TextBlock x:Name="txtResult" HorizontalAlignment="Center" Height="330" Margin="0,118,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="456" FontSize="48" FontWeight="Bold" />
+            <TextBlock x:Name="txtResult" HorizontalAlignment="Center" Height="330" Margin="10,118,10,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="436" FontSize="48" FontWeight="Bold" />
         </Grid>
 
         <!--Uncomment to see an alignment grid to help ensure your controls are
