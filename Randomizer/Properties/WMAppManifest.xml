@@ -4,7 +4,7 @@
   <Languages xmlns="">
     <Language code="en-US" />
   </Languages>
-  <App xmlns="" ProductID="{dcd08429-91ef-447b-a926-13f7922a5952}" Title="Randomizer" RuntimeType="Silverlight" Version="1.0.0.0" Genre="apps.normal" Author="Rod" Description="Unofficial random.org application, Randomizer lets you select a range between two numbers and generate a real random number from this range by consuming an external api from random.org.&#xD;&#xA;This app requires network access to consume random.org api." Publisher="Randomizer" PublisherID="{eb08ed9a-1eb1-41e2-9f3d-78ec2d114498}">
+  <App xmlns="" ProductID="{dcd08429-91ef-447b-a926-13f7922a5952}" Title="Randomizer" RuntimeType="Silverlight" Version="1.1" Genre="apps.normal" Author="Rod" Description="Unofficial random.org application, Randomizer lets you select a range between two numbers and generate a real random number from this range by consuming an external api from random.org.&#xD;&#xA;This app requires network access to consume random.org api." Publisher="Randomizer" PublisherID="{eb08ed9a-1eb1-41e2-9f3d-78ec2d114498}">
     <IconPath IsRelative="true" IsResource="false">Assets\ApplicationIcon.png</IconPath>
     <Capabilities>
       <Capability Name="ID_CAP_NETWORKING" />
