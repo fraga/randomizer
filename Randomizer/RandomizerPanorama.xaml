@@ -19,12 +19,16 @@
 
             <!--Panorama item one-->
             <phone:PanoramaItem Header="Numbers">
-                <Grid/>
+                <Grid>
+                </Grid>
             </phone:PanoramaItem>
 
             <!--Panorama item two-->
             <phone:PanoramaItem Header="Settings">
-                <Grid/>
+                <Grid>
+                    <TextBox x:Name="txtMin" HorizontalAlignment="Left" Height="72" TextWrapping="Wrap" Text="Min" VerticalAlignment="Top" Width="410" GotFocus="TxtMin_GotFocus" Margin="0,-26,0,0" InputScope="Number"/>
+                    <TextBox x:Name="txtMax" HorizontalAlignment="Left" Height="72" Margin="0,46,0,0" TextWrapping="Wrap" Text="Max" VerticalAlignment="Top" Width="410" GotFocus="TxtMax_GotFocus" InputScope="Number"/>
+                </Grid>
             </phone:PanoramaItem>
             <phone:PanoramaItem Header="About">
                 <Grid/>
