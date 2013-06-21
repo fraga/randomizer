@@ -20,7 +20,9 @@
             <!--Panorama item one-->
             <phone:PanoramaItem Header="Numbers">
                 <Grid>
-                    <ListBoxItem x:Name="lisResults" HorizontalAlignment="Left"></ListBoxItem>
+                    <ListBox x:Name="lisResults" Width="410" ItemsSource="{Binding}" Margin="0">
+                        <TextBlock x:Name="txtRes" Text="{Binding}" Width="410" FontSize="48"/>
+                    </ListBox>
                 </Grid>
             </phone:PanoramaItem>
 

@@ -7,6 +7,8 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using System.Collections.ObjectModel;
+using System.Collections.Specialized;
 using Randomizer.Resources;
 using Randomizer.Utils;
 
@@ -14,10 +16,13 @@ namespace Randomizer
 {
     public partial class RandomizerPanorama : PhoneApplicationPage
     {
+        public ObservableCollection<string> RandomNumbers = new ObservableCollection<string>();
+
         public RandomizerPanorama()
         {
             InitializeComponent();
             BuildLocalizedApplicationBar();
+            lisResults.DataContext = RandomNumbers;
         }
 
         private void TxtMin_GotFocus(object sender, RoutedEventArgs e)
@@ -36,7 +41,8 @@ namespace Randomizer
             {
                 RandomOrgV1 randomOrg = new RandomOrgV1();
 
-                //txtResult.Text = await randomOrg.IntegerRequest(Int32.Parse(txtMin.Text), Int32.Parse(txtMax.Text)).Request();
+                RandomNumbers.Add(await randomOrg.IntegerRequest(Int32.Parse(txtMin.Text), Int32.Parse(txtMax.Text)).Request());
+
             }
             catch (RandoOrgMinGreaterThanMaxException exception)
             {
