@@ -58,12 +58,18 @@ namespace Randomizer
         {
             // Set the page's ApplicationBar to a new instance of ApplicationBar.
             ApplicationBar = new ApplicationBar();
-
+            ApplicationBar.Buttons.Add(RandomizerAppButton());
             // Create a new button and set the text value to the localized string from AppResources.
-            ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/refresh.png", UriKind.Relative));
-            appBarButton.Text = AppResources.AppBarButtonText;
-            appBarButton.Click += appBarButton_Click;
-            ApplicationBar.Buttons.Add(appBarButton);
+           
+        }
+
+        private ApplicationBarIconButton RandomizerAppButton()
+        {
+            ApplicationBarIconButton randomizerAppButton = new ApplicationBarIconButton(new Uri("/Assets/refresh.png", UriKind.Relative));
+            randomizerAppButton.Text = AppResources.AppBarButtonText;
+            randomizerAppButton.Click += appBarButton_Click;
+            
+            return randomizerAppButton;
         }
     }
 }
