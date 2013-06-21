@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using System.Windows.Navigation;
 using Microsoft.Phone.Controls;
 using Microsoft.Phone.Shell;
+using Randomizer.Resources;
 using Randomizer.Utils;
 
 namespace Randomizer
@@ -16,6 +17,7 @@ namespace Randomizer
         public RandomizerPanorama()
         {
             InitializeComponent();
+            BuildLocalizedApplicationBar();
         }
 
         private void TxtMin_GotFocus(object sender, RoutedEventArgs e)
@@ -44,6 +46,18 @@ namespace Randomizer
             {
                 //txtResult.Text = exception.Message;
             }
+        }
+
+        private void BuildLocalizedApplicationBar()
+        {
+            // Set the page's ApplicationBar to a new instance of ApplicationBar.
+            ApplicationBar = new ApplicationBar();
+
+            // Create a new button and set the text value to the localized string from AppResources.
+            ApplicationBarIconButton appBarButton = new ApplicationBarIconButton(new Uri("/Assets/refresh.png", UriKind.Relative));
+            appBarButton.Text = AppResources.AppBarButtonText;
+            appBarButton.Click += appBarButton_Click;
+            ApplicationBar.Buttons.Add(appBarButton);
         }
     }
 }
