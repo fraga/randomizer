@@ -56,11 +56,8 @@ namespace Randomizer
 
         private void BuildLocalizedApplicationBar()
         {
-            // Set the page's ApplicationBar to a new instance of ApplicationBar.
             ApplicationBar = new ApplicationBar();
             ApplicationBar.Buttons.Add(RandomizerAppButton());
-            // Create a new button and set the text value to the localized string from AppResources.
-           
         }
 
         private ApplicationBarIconButton RandomizerAppButton()
