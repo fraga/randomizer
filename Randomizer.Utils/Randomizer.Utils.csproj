@@ -83,6 +83,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="AssemblyVersion.cs" />
     <Compile Include="Exceptions\RandoOrgMinGreaterThanMaxException.cs" />
     <Compile Include="NumericSystemEnum.cs" />
     <Compile Include="RandomOrgV1.cs" />
